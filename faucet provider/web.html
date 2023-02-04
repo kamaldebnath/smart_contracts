@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>FreeFaucet</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" ></script>
+
+
+</head>
+
+<body>
+
+
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <p id="bal"></p>
+    <br><br>
+
+
+    <input placeholder="1 ETH" id="text1"><br>
+    <button onclick="deposit_faucet()">Deposit</button>
+
+
+    <p>Each wallet can only claim once a day</p>
+    <button onclick="claim_faucet()">Claim Faucet</button>
+    <p id="e"></p>
+
+
+    <script src="contract.js"></script>
+</body>
+</html>
