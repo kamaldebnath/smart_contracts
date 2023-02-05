@@ -3,7 +3,7 @@
 
 pragma solidity 0.8.17;
 contract voting{
-    mapping (address => bool) private votted;
+    mapping (address => bool) private voted;
     mapping (string => uint) public vote_count;
     string[] public candidate_list;
 
@@ -37,9 +37,9 @@ contract voting{
     // function to vote
     function vote(string memory voteFor) public{
         require(validCandidate(voteFor),"Invalid Candidate");
-        require(votted[msg.sender]!=true,"You have already votted");
+        require(voted[msg.sender]!=true,"You have already voted");
         vote_count[voteFor]+=1;
-        votted[msg.sender]=true;
+        voted[msg.sender]=true;
 
     }
 
